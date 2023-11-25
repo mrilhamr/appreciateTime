@@ -4,9 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0; /* Hilangkan margin bawaan browser */
+            padding: 0; /* Hilangkan padding bawaan browser */
+            height: 100vh; /* Atur tinggi halaman menjadi 100% dari viewport */
+            background-color: #F8F9FC;
+            /* background: linear-gradient(#221C35, #14103d); */
+          /* Properti lainnya yang Anda inginkan */
+        }
+
+        .title{
+            color: #343434;
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 120px;
+            font-size: 32px;
+
+            display: flex;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .title_more{
+            color: white;
+            size: 36px;
+            background-color: #3F99ED;
+            border-radius: 48px;
+
+            display: flex;
+            padding: 12px 42px 16px 42px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #waktu{
+            display: flex;
+            justify-content: center;
+            padding-top: 80px;
+
+            font-family: 'Open Sans', sans-serif;
+            font-size: 180px;
+            color: #343434;
+        }
+
+        .message{
+            display: flex;
+            justify-content: center;
+            padding-top: 80px;
+
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            color: #343434;
+        }
+
+      </style>
 </head>
 <body>
-    <div class="title">Appreciate Time</div>
-    <div id="waktu">22:00:00 PM</div>
+    <div class="title">Appreciate Time
+        <div class="title_more">without time limit</div>
+    </div>
+
+    <div id="waktu"></div>
+    <div class="message">Build with &lt;3 for mrs.izefa</div>
+
+    <script>
+		const time = document.getElementById("waktu");
+        
+        setInterval(() => {
+        	const d = new Date();
+            time.innerHTML = d.toLocaleTimeString();
+            }, 1000)
+    </script>
 </body>
 </html>
